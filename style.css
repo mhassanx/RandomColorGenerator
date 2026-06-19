@@ -13,11 +13,13 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 20px;
 }
 
 h3 {
     font-size: 2rem;
     color: #333;
+    text-align: center;
 }
 
 button {
@@ -37,7 +39,7 @@ button:hover {
 }
 
 .box {
-    width: 350px;
+    width: min(350px, 90%);
     height: 220px;
     background: white;
     border-radius: 15px;
@@ -45,7 +47,24 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
     transition: 0.3s;
+}
+
+@media (max-width: 480px) {
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .box {
+        height: 180px;
+        font-size: 1rem;
+    }
 }
